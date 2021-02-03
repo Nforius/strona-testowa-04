@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test BEM - 01</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__navigation">
+            <a href="#" class="header__logo"><img src="img/logo.svg" alt="" class="header__img">space</a>
+            <div class="header__links">
+                <a href="#" class="header__link">Home</a>
+                <a href="#" class="header__link">Blog</a>
+                <a href="#" class="header__link">Contact</a>
+            </div>
+        </nav>
+        <div class="hamburger">
+            <button class="hamburger__button">
+                <span class="hamburger__line hamburger__line--primary"></span>
+                <span class="hamburger__line hamburger__line--secondary"></span>
+            </button>
+            <nav class="menu">
+                <ul class="menu__container">
+                    <li class="menu__list">
+                        <a href="#" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link">Blog</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="discovery">
+            <img src="img/space.svg" alt="" class="discovery__image">
+            <div class="discovery__container">
+                <p class="discovery__paragraph">Space Shuttle</p>
+                <h1 class="discovery__title">Discovery</h1>
+                <p class="discovery__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde tenetur voluptas, perspiciatis quis natus vitae qui quibusdam repellat.</p>
+            </div>
+        </div>
+    </section>
+    <section class="feature">
+        <div class="feature__container">
+            <div class="feature__box">
+                <img src="img/saturn.svg" alt="" class="feature__image">
+                <div class="feature__text">
+                    <p class="feature__paragraph">We Are</p>
+                    <h2 class="feature__title">Feature 1</h2>
+                    <p class="feature__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas expedita assumenda nisi culpa id nulla!</p>
+                </div>
+            </div>
+            <div class="feature__box">
+                <img src="img/target.svg" alt="" class="feature__image">
+                <div class="feature__text">
+                    <p class="feature__paragraph">We Are</p>
+                    <h2 class="feature__title">Feature 2</h2>
+                    <p class="feature__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas expedita assumenda nisi culpa id nulla!</p>
+                </div>
+            </div>
+            <div class="feature__box">
+                <img src="img/www.svg" alt="" class="feature__image">
+                <div class="feature__text">
+                    <p class="feature__paragraph">We Are</p>
+                    <h2 class="feature__title">Feature 3</h2>
+                    <p class="feature__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas expedita assumenda nisi culpa id nulla!</p>
+                </div>
+            </div>
+        </div>
+        <div class="feature__container">
+            <div class="feature__box">
+                <img src="img/antenna.svg" alt="" class="feature__image">
+                <div class="feature__text">
+                    <p class="feature__paragraph">We Are</p>
+                    <h2 class="feature__title">Feature 4</h2>
+                    <p class="feature__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas expedita assumenda nisi culpa id nulla!</p>
+                </div>
+            </div>
+            <div class="feature__box">
+                <img src="img/flash.svg" alt="" class="feature__image">
+                <div class="feature__text">
+                    <p class="feature__paragraph">We Are</p>
+                    <h2 class="feature__title">Feature 5</h2>
+                    <p class="feature__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas expedita assumenda nisi culpa id nulla!</p>
+                </div>
+            </div>
+            <div class="feature__box">
+                <img src="img/prize.svg" alt="" class="feature__image">
+                <div class="feature__text">
+                    <p class="feature__paragraph">We Are</p>
+                    <h2 class="feature__title">Feature 6</h2>
+                    <p class="feature__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas expedita assumenda nisi culpa id nulla!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="gallery">
+            <div class="gallery__box">
+                <img src="img/start.jpg" alt="" class="gallery__img">
+                <div class="gallery__text">
+                    <h3 class="gallery__title">Look Our Gallery</h3>
+                    <p class="gallery__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam error delectus voluptatum aperiam modi vel autem cum quia fugiat.</p>
+                    <p class="gallery__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quod obcaecati ea eius assumenda minus blanditiis? Quos nobis molestiae totam! Dignissimos, saepe porro.</p>
+                </div>
+            </div>
+        </section>
+        <section class="astronaut">
+            <div class="astronaut__info">
+                <h4 class="astronaut__title">What We Think</h4>
+                <p class="astronaut__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus odio expedita aut deserunt minima eius iusto illo quaerat! A sequi maiores voluptatibus nulla iure animi eos repudiandae nihil alias?</p>
+                <p class="astronaut__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus odio expedita aut deserunt minima eius iusto illo quaerat! A sequi maiores voluptatibus nulla iure animi eos repudiandae nihil alias?</p>
+            </div>
+            <img src="img/astronaut.svg" alt="" class="astronaut__img">
+        </section>
+    </main>
+    <footer class="footer">
+        <h5 class="footer__title">discover the universe with us!</h5>
+        <h6 class="footer__newsletter">Newsletter</h6>
+        <input type="text" class="footer__text" placeholder="Your E-Mail">
+        <button class="footer__send">Send</button>
+        <div class="footer__name">
+            <p>space &copy; 2021</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

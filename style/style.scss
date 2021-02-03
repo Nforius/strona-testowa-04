@@ -1,0 +1,409 @@
+// variables
+    //colors
+$font-light: rgb(255, 255, 255);
+$nav-color: rgb(0, 29, 17);
+$open-hamburger:rgb(15, 66, 45);
+$section-color:rgb(0, 41, 24);
+$hover-links:rgb(255, 186, 0);
+$footer-color:rgb(1, 22, 13);
+$footer-name:rgb(0,0,0);
+$button-color:rgb(255, 186, 0);
+    //hamburger line color
+$hamburger-color:rgb(238, 238, 238);
+$hamburger-open-color:rgb(255, 186, 0);
+    // fonts
+$small-font:19px;
+$medium-font: 23px;
+$extra-font: 26px;
+$title-font:35px;
+$large-font: 80px;
+    //font-weight
+$big-font: 400;
+$thick-font: 700;
+// mixins
+@mixin reset {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+*{
+    @include reset;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.header__navigation {
+    background-color: $nav-color;
+    height: 50px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    @include center;
+    justify-content: space-around;
+}
+.header__img{
+    width: 50px;
+    height: 50px;
+    padding:3px;
+}
+.header__link{
+    padding: 10px;
+    text-transform: uppercase;
+    color: $font-light;
+    text-decoration: none;
+    font-size: $medium-font;
+    background-image: linear-gradient($hover-links);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 4.5px;
+    transition: background-size ease 0.5s;
+}
+.header__link:hover{
+    background-size: 100% 4.5px;
+}
+.header__logo{
+    @include center;
+    color: $font-light;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $extra-font;
+    font-weight: $thick-font;
+}
+.hamburger{
+    position: fixed;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    right: -500px;
+    background-color: $open-hamburger;
+    color:$font-light;
+    transition: .4s ease;
+    z-index: 9999;
+}
+.hamburger__button{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color:transparent;
+    border: none;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+.menu__container{
+    @include center;
+    flex-direction: column;
+    height: 100vh;
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.menu__list{
+    padding: 20px;
+}
+.menu__link{
+    color: $font-light;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $extra-font;
+}
+.hamburger__line{
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-color: $hamburger-color;
+    transform: translateY(-7px);
+    border-radius: 50px;
+    transition: .3s ease;
+}
+.hamburger__line:nth-child(2){
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-color: $hamburger-color;
+    transform: translateY(5px);
+    border-radius: 50px;
+    transition: .3s ease;
+}
+.hamburger__open .hamburger__line--primary{
+    transform: translateY(0px) rotate(45deg);
+    background-color: $hamburger-open-color;
+    transition: .3s ease;
+}
+.hamburger__open .hamburger__line--secondary{
+    transform: translateY(0px) rotate(-45deg);
+    background-color: $hamburger-open-color;
+    transition: .3s ease;
+}
+.hamburger__open{
+    right: 0;
+}
+// RWD hamburger
+@media (min-width:571px){
+    .hamburger{
+        display:none;
+    }
+}
+@media (max-width:570px){
+    .header__link{
+        display:none;
+    }
+    .header__navigation{
+        justify-content: space-between;
+    }
+}
+.discovery{
+    @include center;
+    grid-template-columns: 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    color: $font-light;
+    background-color:$section-color;
+}
+.discovery__text{
+    padding: 10px;
+}
+.discovery__image{
+    width: 450px;
+    height: 450px;
+    padding: 10px;
+}
+.discovery__paragraph{
+    font-size:$medium-font;
+    font-weight: $big-font;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+.discovery__title{
+    font-size: $large-font;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.discovery__container{
+    width: 680px;
+    padding-left: 50px;
+}
+.feature__container{
+    @include center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.feature__image{
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+.feature__box{
+    @include center;
+    padding: 30px;
+}
+.feature__paragraph{
+    font-size: $small-font;
+    padding-bottom: 10px;
+}
+.feature__title{
+    font-size:$extra-font;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.feature__p{
+    font-weight: $big-font;
+    width: 200px;
+}
+.gallery{
+    background-color:$section-color;
+    color:$font-light;
+}
+.gallery__box{
+    @include center;
+}
+.gallery__img{
+    width: 350px;
+    height: 550px;
+    padding: 30px;
+}
+.gallery__paragraph{
+    width: 400px;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+.gallery__title{
+    padding: 10px;
+    font-size: $title-font;
+}
+.astronaut{
+    @include center;
+}
+.astronaut__img{
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+.astronaut__title{
+    font-size: $title-font;
+    padding: 10px;
+}
+.astronaut__paragraph{
+    width: 300px;
+    padding: 10px;
+}
+.footer{
+    background-color:$footer-color;
+    width: 100%;
+    @include center;
+    flex-direction: column;
+    color:$font-light;
+}
+.footer__title{
+    font-size: $extra-font;
+    text-transform: uppercase;
+    font-weight:$big-font;
+    margin-top:20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.footer__text{
+    width: 350px;
+    height: 35px;
+    font-size: $small-font;
+    text-align: center;
+    border: 0;
+    border-radius: 50px;
+}
+.footer__text::placeholder{
+    text-align: center;
+}
+.footer__newsletter{
+    text-transform: uppercase;
+    font-size: $extra-font;
+    padding: 20px;
+}
+.footer__send{
+    width: 140px;
+    height: 40px;
+    border: 0;
+    border-radius: 50px;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: $small-font;
+    font-weight: $thick-font;
+    background-color:$button-color;
+}
+.footer__name{
+    @include center;
+    text-transform: uppercase;
+    background-color:$footer-name;
+    color: $font-light;
+    width: 100%;
+    height: 50px;
+}
+
+@media (max-width: 1100px) {
+    .discovery__image {
+      width: 280px;
+      height: 280px;
+    }
+    .discovery__title{
+      font-size: 70px;
+    }
+    .feature__container{
+      align-items: center;
+      flex-direction: column;
+    }
+    .feature__box{
+      flex-direction: row;
+    }
+    .feature__p{
+      width: 400px;
+    }
+  }
+@media (max-width: 800px) {
+    .discovery{
+      flex-direction: column;
+      text-align: center;
+    }
+    .discovery__container{
+      width: 100%;
+      padding: 0;
+    }
+    .discovery__text{
+      padding: 25px;
+    }
+    .discovery__image{
+        width: 380px;
+        height: 380px;
+    }
+    .gallery__box{
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+    .gallery__paragraph{
+        width: 100%;
+    }
+  }
+@media (max-width: 730px) {
+    .astronaut{
+        flex-direction: column;
+    }
+    .astronaut__paragraph{
+        width: 100%;
+    }
+    .feature__p {
+        width: 265px;
+    }
+}
+@media (max-width:465px){
+    .discovery__title {
+        font-size: 54px;
+    }
+    .discovery__image {
+        width: 320px;
+        height: 320px;
+    }
+    .astronaut__img {
+        width: 314px;
+        height: 314px;
+    }
+    .feature__p {
+        width: 168px;
+    }
+}
+@media (max-width:365px){
+    .discovery__title {
+        font-size: 44px;
+    }
+    .footer__text {
+        width: 238px;
+    }
+    .gallery__img{
+        width: 280px;
+        height: 480px;
+    }
+}
+@media (max-width:325px){
+    .discovery__image {
+        width: 250px;
+        height: 265px;
+    }
+    .astronaut__img {
+        width: 256px;
+        height: 253px;
+    }
+    .feature__box{
+        padding: 5px;
+    }
+    .discovery__title {
+        font-size: 37px;
+    }
+}
